@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Portfolio - Thumbnails & Posters</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-palette"></i> MyPortfolio
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#thumbnails">Thumbnails</a></li>
+                <li><a href="#posters">Posters</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Creative Design Portfolio</h1>
+            <p>Thumbnails • Posters • Video Shorts</p>
+            <a href="#thumbnails" class="cta-button">Explore My Work</a>
+        </div>
+    </section>
+
+    <!-- THUMBNAILS SECTION -->
+    <section id="thumbnails" class="portfolio-section">
+        <div class="section-header">
+            <h2>YouTube Thumbnails</h2>
+            <p>High-impact designs for maximum engagement</p>
+        </div>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="gaming">Gaming</button>
+            <button class="filter-btn" data-filter="tech">Tech</button>
+            <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+        </div>
+
+        <div class="portfolio-grid" id="thumbnails-grid">
+            <!-- Thumbnail Cards -->
+            <div class="portfolio-card thumbnail" data-category="gaming">
+                <div class="image-wrapper">
+                    <img src="images/thumbnail1.jpg" alt="Gaming Thumbnail 1" loading="lazy">
+                    <div class="overlay">
+                        <button class="view-btn" onclick="openModal(this)">View</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Gaming Thumbnail #1</h3>
+                    <p>Engaging game review cover</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card thumbnail" data-category="tech">
+                <div class="image-wrapper">
+                    <img src="images/thumbnail2.jpg" alt="Tech Thumbnail 2" loading="lazy">
+                    <div class="overlay">
+                        <button class="view-btn" onclick="openModal(this)">View</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Tech Review Thumbnail</h3>
+                    <p>Latest gadget showcase</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card thumbnail" data-category="lifestyle">
+                <div class="image-wrapper">
+                    <img src="images/thumbnail3.jpg" alt="Lifestyle Thumbnail 3" loading="lazy">
+                    <div class="overlay">
+                        <button class="view-btn" onclick="openModal(this)">View</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Lifestyle Thumbnail</h3>
+                    <p>Daily vlogs cover</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card thumbnail" data-category="gaming">
+                <div class="image-wrapper">
+                    <img src="images/thumbnail4.jpg" alt="Gaming Thumbnail 4" loading="lazy">
+                    <div class="overlay">
+                        <button class="view-btn" onclick="openModal(this)">View</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Gaming Thumbnail #2</h3>
+                    <p>Esports tournament promo</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card thumbnail" data-category="tech">
+                <div class="image-wrapper">
+                    <img src="images/thumbnail5.jpg" alt="Tech Tutorial Thumbnail" loading="lazy">
+                    <div class="overlay">
+                        <button class="view-btn" onclick="openModal(this)">View</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Tutorial Thumbnail</h3>
+                    <p>Coding guide cover</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card thumbnail" data-category="lifestyle">
+                <div class="image-wrapper">
+                    <img src="images/thumbnail6.jpg" alt="Lifestyle Thumbnail" loading="lazy">
+                    <div class="overlay">
+                        <button class="view-btn" onclick="openModal(this)">View</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Lifestyle Vlog #2</h3>
+                    <p>Travel vlog cover</p>
+                </div>
+            </div>
+
+            <!-- Add more thumbnail cards as needed -->
+        </div>
+    </section>
+
+    <!-- POSTERS SECTION (1:1 ASPECT RATIO) -->
+    <section id="posters" class="portfolio-section">
+        <div class="section-header">
+            <h2>Square Poster Designs</h2>
+            <p>1:1 aspect ratio designs for social media</p>
+        </div>
+
+        <div class="portfolio-grid posters-grid">
+            <!-- Poster Cards -->
+            <div class="portfolio-card poster">
+                <div class="image-wrapper square">
+                    <img src="images/poster1.jpg" alt="Social Media Poster 1" loading="lazy">
+                    <div class="overlay">
+                        <button class="view-btn" onclick="openModal(this)">View</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Promo Poster #1</h3>
+                    <p>Product launch design</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card poster">
+                <div class="image-wrapper square">
+                    <img src="images/poster2.jpg" alt="Social Media Poster 2" loading="lazy">
+                    <div class="overlay">
+                        <button class="view-btn" onclick="openModal(this)">View</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Event Poster</h3>
+                    <p>Concert promotion design</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card poster">
+                <div class="image-wrapper square">
+                    <img src="images/poster3.jpg" alt="Social Media Poster 3" loading="lazy">
+                    <div class="overlay">
+                        <button class="view-btn" onclick="openModal(this)">View</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Brand Poster</h3>
+                    <p>Brand awareness campaign</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card poster">
+                <div class="image-wrapper square">
+                    <img src="images/poster4.jpg" alt="Social Media Poster 4" loading="lazy">
+                    <div class="overlay">
+                        <button class="view-btn" onclick="openModal(this)">View</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Sale Poster</h3>
+                    <p>Seasonal discount design</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card poster">
+                <div class="image-wrapper square">
+                    <img src="images/poster5.jpg" alt="Social Media Poster 5" loading="lazy">
+                    <div class="overlay">
+                        <button class="view-btn" onclick="openModal(this)">View</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Tutorial Poster</h3>
+                    <p>Educational content promo</p>
+                </div>
+            </div>
+
+            <div class="portfolio-card poster">
+                <div class="image-wrapper square">
+                    <img src="images/poster6.jpg" alt="Social Media Poster 6" loading="lazy">
+                    <div class="overlay">
+                        <button class="view-btn" onclick="openModal(this)">View</button>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Contest Poster</h3>
+                    <p>Giveaway announcement design</p>
+                </div>
+            </div>
+
+            <!-- Add more posters as needed -->
+        </div>
+    </section>
+
+    <!-- VIDEO SHORTS SECTION -->
+    <section id="videos" class="portfolio-section">
+        <div class="section-header">
+            <h2>Video Shorts</h2>
+            <p>Short-form video content showcase</p>
+        </div>
+
+        <div class="videos-grid">
+            <!-- Video 1 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <video controls poster="images/video-thumb1.jpg" loading="lazy">
+                        <source src="videos/short1.mp4" type="video/mp4">
+                        Your browser doesn't support HTML5 video.
+                    </video>
+                </div>
+                <div class="card-info">
+                    <h3>Design Process</h3>
+                    <p>Behind the scenes - Creating thumbnails</p>
+                    <span class="duration">1:45</span>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <video controls poster="images/video-thumb2.jpg" loading="lazy">
+                        <source src="videos/short2.mp4" type="video/mp4">
+                        Your browser doesn't support HTML5 video.
+                    </video>
+                </div>
+                <div class="card-info">
+                    <h3>Poster Design Tips</h3>
+                    <p>Top 5 tips for stunning poster designs</p>
+                    <span class="duration">2:30</span>
+                </div>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <video controls poster="images/video-thumb3.jpg" loading="lazy">
+                        <source src="videos/short3.mp4" type="video/mp4">
+                        Your browser doesn't support HTML5 video.
+                    </video>
+                </div>
+                <div class="card-info">
+                    <h3>Tools & Software</h3>
+                    <p>Essential design tools I use daily</p>
+                    <span class="duration">3:15</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2>Let's Work Together</h2>
+            <p>Have a project in mind? Get in touch!</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:your@email.com">your@email.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Your City, Country</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="6" required></textarea>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="social-links">
+                <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://behance.net" target="_blank" title="Behance"><i class="fab fa-behance"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 My Design Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- IMAGE MODAL -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
